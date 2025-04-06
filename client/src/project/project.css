@@ -1,0 +1,22 @@
+.project-header{
+    padding-top: 22px
+}
+.project-h4{
+    color: aliceblue;
+    
+    
+   
+}
+.project-one{
+    font-size: large;
+    color: aliceblue;
+    font-family: monospace;
+
+}
+.project-one:hover{
+    color: #54D6BB;
+}
+.project-details{
+   padding-left: 520px;
+   margin: 11px;
+}

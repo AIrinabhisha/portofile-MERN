@@ -1,0 +1,58 @@
+/* About Section Styling */
+.technology-section {
+  padding: 40px 0;
+  text-align: center;
+}
+
+.technology-title {
+  color: #64ffda;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Skills List Container */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+}
+
+/* Individual Skill Box */
+.skill-box {
+  border: 2px solid #64ffda;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 12px 24px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+/* Skill Text */
+.skill-box h1 {
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Hover Effect */
+.skill-box:hover {
+  background: rgba(100, 255, 218, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .technology-title {
+    font-size: 1.25rem;
+  }
+
+  .skills-list {
+    justify-content: center;
+  }
+
+  .skill-box {
+    padding: 10px 20px;
+  }
+}

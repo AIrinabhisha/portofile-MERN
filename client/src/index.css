@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+i{
+    cursor: pointer;
+}
+i:hover{
+    color: white;
+}
+   header h1{
+    margin:0 !important;
+    padding: 0 !important;
+   } 
+/*
+Loader animation */
+.k{
+    animation: k 1s infinite;
+}
+@keyframes k{
+    0%{
+      opacity: 1;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    100%{
+        opacity: 0.5 ;
+    }
+}
+
+.a{
+    animation: a 1s infinite;
+}
+@keyframes a{
+    0%{
+      opacity: 0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1.5;
+    }
+}
+
+.r{
+    animation: r 1s infinite;
+}
+@keyframes r{
+    0%{
+      opacity: 0.5;
+    }
+    50%{
+        opacity: 1.5;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
