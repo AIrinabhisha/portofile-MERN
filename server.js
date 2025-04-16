@@ -1,39 +1,28 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const path = require("path");
+const path = require('path');
+const connectDB = require('./config/dbConfig');
 
 const portfolioRoute = require('./routes/portfolioRoute');
-const connectDB = require('./config/dbConfig');
-const adminRouter = require("./routes/adminRouter");
+const adminRouter = require('./routes/adminRouter');
 
+// Load environment variables
 dotenv.config();
 
+// Initialize app
 const app = express();
+
+// Connect to MongoDB
 connectDB();
 
 // Middleware
 app.use(express.json());
 app.use(cors());
 
-// MongoDB Connection
-mongoose.connect(process.env.MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  ssl: true,
-})
-.then(() => {
-  console.log('✅ Connected to MongoDB');
-})
-.catch((err) => {
-  console.error('❌ Database connection error:', err.message);
-  process.exit(1);
-});
-
-// Routes
+// API Routes
 app.use('/api/portfolio', portfolioRoute);
-app.use("/api/admin", adminRouter);
+app.use('/api/admin', adminRouter);
 
 // Root route
 app.get('/', (req, res) => {
@@ -49,8 +38,8 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// ✅ Start server (outside the production check)
+// ✅ Start server
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, '0.0.0.0', () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
