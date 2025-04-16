@@ -39,7 +39,7 @@ function App() {
 
         {!showLoading && (
           <Routes>
-            <Route path="/" element={<Index />} />
+            <Route path="/pr" element={<Index />} />
             <Route path="/admin" element={
               <PrivateRoute>
                 <Admin />
